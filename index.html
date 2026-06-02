@@ -179,9 +179,9 @@
     </div>
     <div class="stats-row">
       <div class="stat-box"><span class="stat-num accent">46</span><span class="stat-desc">X Posts Published</span></div>
-      <div class="stat-box"><span class="stat-num">54</span><span class="stat-desc">Days Active</span></div>
+      <div class="stat-box"><span class="stat-num" id="daysActive"></span><span class="stat-desc">Days Active</span></div>
       <div class="stat-box"><span class="stat-num orange">322</span><span class="stat-desc">TG Members (Current)</span></div>
-      <div class="stat-box"><span class="stat-num blue">6+</span><span class="stat-desc">Members Personally Guided</span></div>
+      <div class="stat-box"><span class="stat-num blue">10+</span><span class="stat-desc">Members Personally Guided</span></div>
     </div>
   </div>
 
@@ -210,11 +210,15 @@
           <span class="member-num">322</span>
           <span class="member-sub">Members as of May 29, 2026</span>
         </div>
-        <p class="role-label">Position in Group Hierarchy</p>
-        <div style="font-size:12.5px; color: var(--text-mid); line-height:1.8;">
-          Listed 2nd in the group — directly below the Owner (James Tervit).<br>
-          Above all standard Admin roles.<br><br>
-          <span style="color: var(--accent);">Talking Panda</span> is a named, custom role — not a default admin tag.
+<p class="role-label">Position in Group</p>
+<div style="font-size:12.5px; color: var(--text-mid); line-height:1.8;">
+  Serves under the custom role of
+  <span style="color: var(--accent);">Talking Panda</span>,
+  with responsibilities spanning moderation, community education,
+  onboarding support, X Space coordination, and contributor guidance.
+  <br><br>
+  The role is a named custom position within Chronara Raids and is not a default Telegram admin tag.
+</div>
         </div>
       </div>
     </div>
@@ -268,12 +272,12 @@
   <div class="section" id="s4">
     <div class="section-header">
       <span class="section-num">04</span>
-      <h2 class="section-title">TG <em>Activity</em></h2>
+      <h2 class="section-title">Community <em>Impact</em>></h2>
     </div>
     <div class="activity-log">
       <div class="activity-row">
-        <span class="activity-channel">44Craft Collab</span>
-        <span class="activity-desc">Bridged 44Craft community with Chronara AI Africa. Cross-community pipeline for onboarding and education. Documented in public post.</span>
+        <span class="activity-channel">44Craft × Chronara Africa</span>
+        <span class="activity-desc">Established a partnership between 44Craft and Chronara AI Africa to coordinate community education, onboarding, and contributor development. Created a structured pathway for introducing builders to the Chronara ecosystem and helping them understand participation mechanics.</span>
         <span class="activity-date">Apr 30, 2026</span>
       </div>
       <div class="activity-row">
@@ -282,15 +286,15 @@
         <span class="activity-date">May 10, 2026</span>
       </div>
       <div class="activity-row">
-        <span class="activity-channel">#study-chronara</span>
-        <span class="activity-desc">Seeded the knowledge channel. Called on Chronara Scholar to drop quality materials. Personally uploaded foundational and advanced guides for community education.</span>
-        <span class="activity-date">May 16, 2026</span>
-      </div>
-      <div class="activity-row">
-        <span class="activity-channel">#study-chronara</span>
-        <span class="activity-desc">Community responses: barmsweb3, Basma, Miss_Tamsy, Godwin all acknowledged the materials. Channel became an active knowledge base.</span>
-        <span class="activity-date">May 17–18, 2026</span>
-      </div>
+  <span class="activity-channel">44Craft Discord</span>
+  <span class="activity-desc">Established and developed #study-chronara within the 44Craft Discord as a dedicated learning hub for Chronara AI. Coordinated educational resources, encouraged knowledge sharing, and personally uploaded foundational and advanced materials to help members better understand the ecosystem.</span>
+  <span class="activity-date">May 16, 2026</span>
+</div>
+     <div class="activity-row">
+  <span class="activity-channel">44Craft Discord</span>
+  <span class="activity-desc">Community members including barmsweb3, Basma, Miss_Tamsy, and Godwin actively engaged with the educational materials. #study-chronara evolved into a growing knowledge base and discussion hub for Chronara AI learning and contributor development.</span>
+  <span class="activity-date">May 17–18, 2026</span>
+</div>
       <div class="activity-row">
         <span class="activity-channel">X Space Coord.</span>
         <span class="activity-desc">Briefed KEKE BOY on X Space format — open shill format, relaxed structure, community vibe. Trusted them to moderate independently.</span>
@@ -311,7 +315,7 @@
     </div>
     <div class="study-card">
       <div class="study-title">#study-chronara</div>
-      <p class="study-body">Beyond individual onboarding, Bamboo helped establish a dedicated knowledge channel inside the Chronara AI community. The channel was seeded with structured educational resources — not links or reposts, but purpose-built guides designed to help new members understand the system properly and contribute quality content.</p>
+      <p class="study-body">Beyond individual onboarding, Bamboo established #study-chronara within the 44Craft Discord community as a dedicated educational hub focused on Chronara AI. The initiative served as a bridge between 44Craft and Chronara AI Africa, helping members access structured learning resources, deepen their understanding of the ecosystem, and contribute more effectively. The channel was seeded with structured educational resources — not links or reposts, but purpose-built guides designed to help new members understand the system properly and contribute quality content.</p>
       <div class="study-docs">
         <div class="study-doc">
           <span class="doc-icon">📄</span>
@@ -419,5 +423,12 @@ const observer = new IntersectionObserver((entries) => {
 }, { threshold: 0.08 });
 document.querySelectorAll('.section').forEach(s => observer.observe(s));
 </script>
+ const startDate = new Date('2026-04-06');
+const today = new Date();
+
+const diffTime = today - startDate;
+const diffDays = Math.floor(diffTime / (1000 * 60 * 60 * 24));
+
+document.getElementById('daysActive').textContent = diffDays;
 </body>
 </html>
