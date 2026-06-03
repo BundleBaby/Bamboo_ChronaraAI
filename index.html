@@ -137,14 +137,6 @@
   <div class="header-grid"></div>
   <div class="header-glow"></div>
   <div class="header-glow-2"></div>
-<img src="Chronara%20AI%20Logo.png"
-     alt="Chronara AI Logo"
-     style="
-       width:250px;
-       max-width:70%;
-       display:block;
-       margin-bottom:24px;
-     ">
   <div class="eyebrow"><span>Proof of Work — Chronara AI</span></div>
  <img src="Bamboo%20Head.jpg"
      alt="Bamboo"
@@ -358,6 +350,39 @@
     <div class="posts-list" id="postsList"></div>
   </div>
 
+ <div class="section" id="s7">
+  <div class="section-header">
+    <span class="section-num">07</span>
+    <h2 class="section-title">Partnerships & <em>Ecosystem Building</em></h2>
+  </div>
+
+  <div class="partnership-section">
+
+    <img src="44Craft.jpg" alt="44Craft" class="partner-logo">
+
+    <img src="Chronara%20AI%20Logo.png" alt="Chronara AI" class="partner-logo">
+
+    <img src="44%20x%20ChronaraAfrica.jpg" alt="44Craft x Chronara AI Africa" class="partnership-banner">
+
+    <div class="partnership-card">
+      <h3>44Craft × Chronara AI Africa</h3>
+
+      <p>
+        Established a collaborative bridge between the 44Craft community and
+        Chronara AI Africa focused on education, contributor development,
+        onboarding, and ecosystem growth.
+      </p>
+
+      <a
+        href="44Craft_x_Chronara_AI_Africa_Partnership%20(3).pdf"
+        target="_blank"
+        class="doc-link">
+        View Partnership Documentation
+      </a>
+    </div>
+
+  </div>
+</div>
 </main>
 
 <footer>
@@ -415,6 +440,44 @@ const posts = [
   { date: "May 29, 2026", url: "https://x.com/bamboo_web3/status/2060272165388198184" },
 ];
 
+ .partnership-section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 30px;
+}
+
+.partner-logo {
+  max-width: 280px;
+  width: 100%;
+}
+
+.partnership-banner {
+  width: 100%;
+  max-width: 800px;
+  border: 1px solid var(--border);
+}
+
+.partnership-card {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  padding: 32px;
+  width: 100%;
+  max-width: 800px;
+  text-align: center;
+}
+
+.partnership-card h3 {
+  color: var(--white);
+  margin-bottom: 16px;
+}
+
+.doc-link {
+  display: inline-block;
+  margin-top: 20px;
+  color: var(--accent);
+  text-decoration: none;
+}
 const list = document.getElementById('postsList');
 posts.forEach(p => {
   const a = document.createElement('a');
